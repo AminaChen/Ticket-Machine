@@ -1,0 +1,974 @@
+/* ------------------------------------ */
+/* $Global Catalog */
+/* ------------------------------------ */
+/*
+ * $Font Import
+ * $Base
+ * $Typegraphy
+ * $Icons
+ * $Components
+ * $Utilities
+ */
+
+
+
+/* ------------------------------------ */
+/* $Page Catalog */
+/* ------------------------------------ */
+/*
+ * $1StartToBuy
+ * $2ChoseLanguage
+ * $3ChoseService
+ * $4ChoseNationality
+ * $5SelectTicket
+ * $6SelectGuides
+ * $7SelectFailOverBuy
+ * $8SelectFailOverSum
+ * $9SelectPay
+ * $10ConfirmOrder
+ * $11PayByCreditCard
+ * $12PayByEasyCard
+ * $13PayByAlipay
+ * $14PayFailCreditCard
+ * $15PayFailEasyCard
+ * $16NoticeOrderBeCanceled
+ * $17PaySuccess
+*/
+/* ------------------------------------------------ */
+
+
+
+
+
+
+/* ------------------------------------ */
+/* $Global Catalog Start*/
+/* ------------------------------------ */
+/* $Font Import */
+/* ------------------------------------ */
+@font-face {
+    font-family: 'yugothib';
+    src:  url('../fonts/yugothib.woff') format("woff"),
+            url('../fonts/yugothib.woff2') format("woff2"),
+            url('../fonts/yugothib.ttf') format("truetype"),
+            url('../fonts/yugothib.eot') format("embedded-opentype"),
+            url('../fonts/yugothib.svg') format("svg");
+}
+@font-face {
+    font-family: 'yugothic';
+    src:  url('../fonts/yugothic.woff') format("woff"),
+            url('../fonts/yugothic.woff2') format("woff2"),
+            url('../fonts/yugothic.ttf') format("truetype"),
+            url('../fonts/yugothic.eot') format("embedded-opentype"),
+            url('../fonts/yugothic.svg') format("svg");
+}
+@font-face {
+    font-family: 'sf-ui-display-regular';
+    src:  url('../fonts/sf-ui-display-regular.woff') format("woff"),
+            url('../fonts/sf-ui-display-regular.woff2') format("woff2"),
+            url('../fonts/sf-ui-display-regular.ttf') format("truetype"),
+            url('../fonts/sf-ui-display-regular.eot') format("embedded-opentype"),
+            url('../fonts/sf-ui-display-regular.svg') format("svg");
+}
+@font-face {
+    font-family: 'sf-ui-display-bold';
+    src:  url('../fonts/sf-ui-display-bold.woff') format("woff"),
+            url('../fonts/sf-ui-display-bold.woff2') format("woff2"),
+            url('../fonts/sf-ui-display-bold.ttf') format("truetype"),
+            url('../fonts/sf-ui-display-bold.eot') format("embedded-opentype"),
+            url('../fonts/sf-ui-display-bold.svg') format("svg");
+}
+
+/* ------------------------------------ */
+/* $Base */
+/* ------------------------------------ */
+:root {
+    /* Colors: */
+    --unnamed-color-000000: #000000;
+    --unnamed-color-8e8e93: #8E8E93;
+    --unnamed-color-F9F9F9: #F9F9F9;
+    --unnamed-color-c7c7cc: #C7C7CC;
+    --unnamed-color-d1d1d6: #D1D1D6;
+    --unnamed-color-e5e5ea: #E5E5EA;
+    --unnamed-color-efeff4: #EFEFF4;
+    --unnamed-color-ffffff: #FFFFFF;
+    --unnamed-color-ff2d55: #FF2D55;
+    --unnamed-color-5856d6: #5856D6;
+    --unnamed-color-007aff: #007AFF;
+    --unnamed-color-5ac8fa: #5AC8FA;
+    --unnamed-color-4cd964: #4CD964;
+    --unnamed-color-ffcc00: #FFCC00;
+    --unnamed-color-ff9500: #FF9500;
+    --unnamed-color-ff3b30: #FF3B30;
+    --unnamed-color-f96363: #F96363;
+    --unnamed-color-a3d64a: #A3D64A;
+    --unnamed-color-ececec: #ECECEC;
+
+    --unnamed-color-999999: #999999;
+    --unnamed-color-666666: #666666;
+    --unnamed-color-AAAAAA: #AAAAAA;
+    --primary-color-7D0000: #7D0000;
+    --btnNext-color-82BF25: #82BF25;
+    --btnConfirm-color-7AC943: #7AC943;
+
+
+    /* fonts */
+
+    /* 
+    游黑體 缺碰您 字重 300 600
+    yugothic
+    yugothib
+
+    設計圖使用的字體 San Francisco 只有英文
+    sf-ui-display-regular
+    sf-ui-display-bold
+
+    最方便完整 單用 補字用
+    Noto Sans TC 
+    */
+
+    /* 套用區 */
+    --font-ch-regular: 'yugothic';
+    --font-ch-bold: 'yugothib';
+    --font-en-regular: 'sf-ui-display-regular';
+    --font-en-bold: 'sf-ui-display-bold';
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: var(--font-en-regular), var(--font-ch-bold);
+    position: relative;
+    box-sizing: border-box;    
+}
+.wrap{
+    width: 1366px;
+    height: 768px;
+}
+.step2PayActionG{
+    height: calc(100% - 20px);
+}
+.hw{    
+    height: calc(100% - 20px);
+    width: 100%;
+    padding: 40px;
+}
+
+.logo{
+    width: 305px;
+    height: 65px;
+    background-color: var(--primary-color-7D0000);
+}
+.bottomLine{
+    height: 20px;
+    width: 1366px;
+    background-color: var(--primary-color-7D0000);
+}
+
+.bodyWrap{
+    width: 1186px;
+    height: 500px;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;    
+}
+.slide .icon-slide{
+    position: absolute;
+    font-size: 48px;
+    z-index: 100;
+    right: -65px;
+    bottom: 80px;
+    color: var(--primary-color-7D0000);
+}
+.farSlide .icon-slide{
+    bottom: 0;
+}
+
+.slide:after{
+    content: '';
+    width: 5px;
+    height: 300px;
+    background-color: var(--primary-color-7D0000);
+    position: absolute;
+    right: -15px;
+    top: 10px;
+    border-radius: 500px;
+}
+
+
+
+/* ------------------------------------ */
+/* $Typegraphy */
+/* ------------------------------------ */
+.displayMoney{ font-size: 50px; }
+.displayWord-ch{
+    text-align: center;
+    font-size: 42px;
+    letter-spacing: 2.1px;
+    line-height: 50px;
+    color: var(--primary-color-7D0000);
+}
+.displayWord-en{
+    font-size: 36px;
+    letter-spacing: 1.8px;
+    line-height: 43px;
+    color: var(--unnamed-color-666666);
+}
+
+.h3{ font-size: 35px; }
+.h4{ font-size: 34px; }
+.h6{ font-size: 28px; }
+.h7{ font-size: 26px; }
+.h8{ font-size: 24px; }
+.h9{ font-size: 20px; }
+.p{ font-size: 12px; }
+
+/* FontWeight */
+.fw600{
+    font-weight: 600;
+}
+
+.displayWordGroup{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* ------------------------------------ */
+/* $Icons */
+/* ------------------------------------ */
+
+.icon-home{
+    color: var(--unnamed-color-ffffff);
+    font-size: 1.7em;
+    line-height: 65;
+    text-align: center;
+    margin-right: 15px
+}
+.icon-back{
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+.icon-next-1{
+    font-size: 1.1em;
+    margin-left: 5px;
+}
+.icon-diminish .icon-plus{
+    font-size: 20px;
+}
+.icon-check{
+    font-size: 24px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.icon-close{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* ------------------------------------ */
+/* $Components */
+/* ------------------------------------ */
+
+/* ---------- $Button ---------- */
+.btn{
+    width: 150px;
+    height: 65px;
+    margin-bottom: 10px;
+    border: 2px solid var(--unnamed-color-999999);
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: var(--font-ch-regular);
+    letter-spacing: 1.2px;
+    font-weight: 300;
+}
+.btn-bg, .btn-md, .btn-sm{
+    color: var(--unnamed-color-666666);
+    background: linear-gradient(0, #ECECEC, #FEFEFE, #FFF);
+}
+.btn-bg{
+    font-size: 34px;
+    width: 215px;
+    height: 215px;
+}
+.btn-md{
+    font-size: 34px;
+    width: 345px;
+    height: 100px;
+    font-weight: 600;
+    font-family: var(--font-ch-bold);
+    letter-spacing: 0;
+}
+.btn-bg + .btn-bg{
+    margin-left: 35px;
+}
+.btn-sm{
+    font-size: 24px;
+    width: 150px;
+    height: 65px;
+}
+
+.btn-active{
+    color: var(--unnamed-color-ffffff);
+    background: var(--primary-color-7D0000);
+    border: none;
+}
+.btn-ticketTypeActive{
+    background: var(--primary-color-7D0000);
+    border: none;
+    color: var(--unnamed-color-ffffff);
+}
+.btn-ticketTypeActive:after{
+    content: '';
+    width: 430px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--primary-color-7D0000);
+    z-index: -10;
+    border-radius: 100px 0 0 100px;
+}
+.btn-ticketTypeActive .ticketTypeTotalQuantity{
+    color: var(--primary-color-7D0000);
+    background-color: var(--unnamed-color-ffffff);
+}
+
+.btn-touchStartBuy{
+    font-size: 100px;
+    width: 570px;
+    height: 220px;
+    border: none;
+    background-color: var(--primary-color-7D0000);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.btn-touchStartBuy:after{
+    content: '';
+    height: 93px;
+    width: 70px;
+    position: absolute;
+    right: 10px;
+    bottom: -70px;
+    background-image: url('../img/touch-screen.svg');
+    background-size: 70px 93px;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+
+.btn-home{
+    width: 80px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    border-radius: 45px 0 0 45px;
+    background: var(--primary-color-7D0000);
+    border: none;
+}
+
+.btn-back, .btn-next{
+    font-weight: 600;
+    width: 200px;
+    height: 80px;
+    font-size: 28px;    
+    margin: 0;
+    font-family: var(--font-ch-regular);
+}
+.btn-back{
+    color: var(--unnamed-color-999999);
+}
+.btn-next{
+    color: var(--btnNext-color-82BF25);
+    border-color: #82BF25;
+    margin-left: 30px;
+}
+.btn-backNextGroup{
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.btn-confirm{
+    width: 210px;
+    height: 50px;
+    background-color: var(--btnConfirm-color-7AC943);
+    border: none;
+    border-radius: 100px;
+    font-size: 24px;
+    font-family: var(--font-ch-bold);
+    color: var(--unnamed-color-ffffff);
+}
+.btn-alertOverTicket{
+    margin-top: 40px;
+}
+.btn-confirmG .btn + .btn{
+    margin-left: 25px;
+}
+.btn-confirmG .btn:first-of-type{
+    background-color: var(--unnamed-color-f96363);
+}
+.btn-confirmG .fw600{
+    margin-top: 5px;
+}
+
+/* ---------- $Title ---------- */
+
+.title{
+    font-size: 24px;
+    width: 150px;
+    height: 45px;
+    color: var(--unnamed-color-ffffff);
+    background: var(--primary-color-7D0000);
+    line-height: 29px;
+    border-radius: 45px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+
+/* ------------------------------------ */
+/* $Utilities */
+/* ------------------------------------ */
+.horizontal{
+    display: flex;
+}
+.vertical{
+    display: flex;
+    flex-flow: column;
+}
+.vertical-center{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.h-20{    
+    height: calc(100% - 20px);
+}
+.LR-padding{
+    padding: 0 50px;
+}
+.margin-t-30{ margin-top: 30px; }
+.margin-l-30{ margin-left: 30px; }
+
+
+/* ------------------------------------ */
+/* $Global Catalog End*/
+/* ------------------------------------ */
+/* $Page Catalog Start*/
+/* ------------------------------------ */
+
+/* ------------------------------ */
+/* $1StartToBuy */
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/* $2ChoseLanguage */
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/* $3ChoseService */
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/* $4ChoseNationality */
+/* ------------------------------ */
+.continent + .continent{
+    margin-left: 29px;
+}
+.title-asia{
+    width: 470px;
+    height: 45px;
+}
+.countriesGroup{
+    display: flex;
+    flex-wrap: wrap;
+}
+.countriesGroup div:nth-child(3n),
+.countriesGroup div:nth-child(3n-1){
+    margin-left: 10px;
+}
+
+
+
+/* ------------------------------ */
+/* $5SelectTicket */
+/* ------------------------------ */
+
+/* ---------- Step ---------- */
+.headGroup{
+    width: 100%;
+    justify-content: space-between;
+}
+.stepHomeG{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -40px;
+}
+.step123G{
+    display: flex;
+}
+.stepG{
+    width: 290px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    border: 3px solid var(--primary-color-7D0000);
+    border-radius: 100px 0 0 100px;
+    color: var(--primary-color-7D0000);
+    background-color: var(--unnamed-color-ffffff);
+    z-index: 2;
+}
+.stepG:last-child{
+    border-radius: 100px;
+}
+.stepG + .stepG{
+    margin-left: -12px;
+}
+.stepG:first-child:after,
+.stepG:nth-child(2):after{
+    content: '';
+    height: 65px;
+    width: 290px;
+    border-left: 4px solid var(--primary-color-7D0000);
+    border-radius: 100px;
+    position: absolute;
+    right: -273px;
+    background-color: white;
+
+}
+.stepNumber{
+    width: 50px;
+    height: 50px;
+    margin-left: 7px;
+    border-radius: 100px;
+    background-color: var(--primary-color-7D0000);
+    color: var(--unnamed-color-ffffff);
+    font-size: 33px;
+    font-family: var(--font-en-bold);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stepWord{
+    margin-left: 50px;
+}
+
+.step-active{
+    background-color: var(--primary-color-7D0000);
+    color: var(--unnamed-color-ffffff);
+
+}
+.step-active .stepNumber{
+    background-color: var(--unnamed-color-ffffff);
+    color: var(--primary-color-7D0000);
+}
+
+/* ---------- choseTicketG ---------- */
+.choseTicketG{ 
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.ticketTypeG{
+    position: absolute;
+    left: 0;
+    top: 0;
+    letter-spacing: -48px;
+}
+.ticketTypeTotalQuantity{
+    height: 40px;
+    width: 40px;
+    font-size: 24px;
+    font-family: var(--font-en-bold);
+    margin-left: 10px;
+    background-color: var(--primary-color-7D0000);
+    color: var(--unnamed-color-ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+
+
+.ticketItemG{
+    width: 812px;
+    height: 483px;
+    padding: 3px 24px 3px 26px;
+    background-color: var(--primary-color-7D0000);
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+}
+
+
+
+.ticketItem{
+    width: 100%;
+    height: 70px;
+    padding: 16px 0 15px 0;
+    background-color: inherit;
+    color: var(--unnamed-color-ffffff);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px dashed #ffffff;
+}
+.ticketItem:last-child{
+    border: none;
+}
+
+
+.ticketNameG{
+    width: 100%;
+    text-align: left;
+}
+.ticketName{
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.48px;
+    font-family: var(--font-en-bold), var(--font-ch-bold);
+}
+.ticketExplaination{
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 4px;
+    font-weight: 100;
+    letter-spacing: .3px;
+    color: var(--unnamed-color-AAAAAA);
+    font-family: var(--font-en-regular), 'Noto Sans TC';
+    font-family: var(--font-en-regular), var(--font-ch-regular);
+}
+
+.priceQuantityG{
+    font-size: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+.ticketPrice{
+    font-family: var(--font-en-bold);
+}
+.choseTicketQuantityG{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.moneyAndNextG{
+    display: flex;
+    justify-content: flex-end;
+    width: 800px;
+}
+.totalTicketAndMoneyG{
+    width: 65%;
+    align-items: flex-end;
+}
+.totalTicket, .totalMoney{
+    font-weight: 600;
+    font-family: var(--font-en-bold), var(--font-ch-bold);
+
+}
+.totalTicket{
+    font-size: 26px;
+    color: var(--primary-color-7D0000);
+}
+.totalMoney{
+    font-size: 34px;
+    color: var(--unnamed-color-ff2d55);
+}
+
+/* ------------------------------ */
+/* $6SelectGuides */
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/* $7SelectFailOverBuy */
+/* ------------------------------ */
+.alert-bg{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+.alert-bg .alert{
+    width: 500px;
+    height: 375px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+    border-radius: 20px;
+}
+.alert-heading{
+    width: 500px;
+    height: 55px;
+    background-color: var(--primary-color-7D0000);
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: var(--unnamed-color-ffffff)
+}
+.alert-body{
+    width: 500px;
+    height: calc(100% - 55px);
+    background-color: var(--unnamed-color-ffffff);
+    border-radius: 0 0 20px 20px;
+    font-size: 35px;
+    color: var(--unnamed-color-666666);
+
+}
+.alert-body p{
+    line-height: 10px;
+    font-family: var(--font-en-regular), var(--font-ch-regular);
+    font-weight: 300;
+}
+.alert-content{
+    margin-top: 40px;
+    height: 140px;
+}
+
+
+/* ------------------------------ */
+/* $8SelectFailOverSum */
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* $9SelectPay */
+/* ------------------------------ */
+.buyInfoChosePayG{
+    width: 1186px;
+    height: 483px;
+    justify-content: space-between;
+}
+.buyInfoG{
+    width: 600px;
+}
+.buyInfoG .title{
+    width: 100%;
+}
+.buyInfoG table{
+    width: 100%;
+    height: 351px;
+    border-collapse: collapse;
+
+}
+.buyInfoG table th{
+    font-size: 20px;
+    font-family: var(--font-ch-regular);
+    font-weight: 300;
+    color: var(--unnamed-color-999999);
+    padding: 0 10px 10px;
+}
+.buyInfoG table td{
+    text-align: left;
+    vertical-align: bottom;
+    height: 53px;
+    padding: 7px;
+    border: none;
+}
+
+.buyInfoG table tr:nth-child(even){
+    background-color: var(--unnamed-color-F9F9F9);
+}
+.buyInfoG table tr:first-child{
+    border-bottom: 1px dashed var(--unnamed-color-666666);
+}
+
+.buyInfoG .ticketName{
+    font-size: 18px;
+    color: var(--primary-color-7D0000);
+}
+.buyInfoG .ticketExplaination{
+    margin-bottom: 4px;
+}
+.buyInfoG .price{
+    color: var(--unnamed-color-666666);
+}
+.buyInfoG .amount{
+    text-align: center;
+}
+.buyInfoG .sum{
+    color: var(--unnamed-color-ff2d55);
+}
+.buyInfoG .price,
+.buyInfoG .sum{
+    text-align: right;
+    font-family: var(--font-en-bold);
+}
+.buyInfoG .totalTicketAndMoneyG{
+    margin-top: 33px;
+    align-self: flex-end;
+}
+
+.chosePayG{
+    width: 510px;
+}
+.chosePayG .title{
+    width: 100%;
+    background-color: var(--unnamed-color-ff2d55);
+}
+.payWayG{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.payWayPattern{
+    height: 45px;
+    width: 210px;
+    margin-bottom: 13px;
+    background-color: #FF2D55;
+    z-index: 50;
+}
+.chosePayG .btn{
+    width: 250px;
+    height: 135px;
+}
+.payWayG .btn{
+    font-family: var(--font-ch-bold);
+    color: var(--unnamed-color-666666);
+
+}
+.chosePayG .btn:nth-child(even){
+    margin-left: 10px;
+}
+
+/* ------------------------------ */
+/* $10ConfirmOrder */
+/* ------------------------------ */
+.confirmOrder .buyInfoG{
+    width: 100%;
+}
+
+
+/* ------------------------------ */
+/* $11PayByCreditCard */
+/* ------------------------------ */
+.step2PayActionG .hw{
+    height: 100%;
+    padding-bottom: 0;
+}
+.creditCardPayG{
+    width: 100%;
+}
+.orderPayG{
+    width: 500px;
+    height: 74px;
+    font-size: 28px;
+    color: var(--unnamed-color-666666);
+}
+
+
+
+.payActionG{
+    width: 100%;
+    height: 385px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+.payActionG .creditPayAction{
+    margin-top: 40px;
+    width: 250px;
+    height: 286px;
+    background-color: var(--primary-color-7D0000);
+}
+
+.numberTotalyMoneyG{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.numberTotalyMoneyG .number{
+    font-size: 18px;
+    color: var(--unnamed-color-999999);
+}
+.numberTotalyMoneyG .totalMoneyTitle{
+    font-size: 34px;
+    color: var(--unnamed-color-ff2d55);
+}
+.numberTotalyMoneyG .totalMoney{
+    font-size: 50px;
+}
+
+
+/* ------------------------------ */
+/* $12PayByEasyCard */
+/* ------------------------------ */
+.payActionG .easyPayAction{
+    margin-top: 50px;
+    width: 305px;
+    height: 255px;
+    background-color: var(--primary-color-7D0000);
+}
+
+
+/* ------------------------------ */
+/* $13PayByAlipay */
+/* ------------------------------ */
+.payActionG .aLiPayAction{
+    margin-top: 50px;
+    width: 389px;
+    height: 250px;
+    background-color: var(--primary-color-7D0000);
+}
+
+
+/* ------------------------------ */
+/* $14PayFailCreditCard */
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/* $15PayFailEasyCard */
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/* $16NoticeOrderBeCanceled */
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/* $17PaySuccess */
+/* ------------------------------ */
+.paySuccessAction{
+    margin-top: 30px;
+    width: 250px;
+    height: 250px;
+    background-color: var(--primary-color-7D0000);
+}
